@@ -1,0 +1,8 @@
+Plan for the Website:
+
+Day-by-day itenary
+- Main Page with Trip Overview
+- Individual Page with detailed plan, expected cost
+
+Pricing Page
+- Price Breakdowns for individual day and entire trip
