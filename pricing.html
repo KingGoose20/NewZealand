@@ -1,29 +1,43 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Pricing - New Zealand</title>
   <link rel="stylesheet" href="css.css">
 </head>
+
 <body>
   <div id="header"></div>
   <script src="header.js" data-current-page="13"></script>
 
   <main class="container">
-    <h1>Pricing</h1>
-    <p>Basic pricing examples for sample tour packages.</p>
-
-    <table>
-      <thead>
-        <tr><th>Package</th><th>Duration</th><th>Price (NZD)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Explorer</td><td>3 days</td><td>$899</td></tr>
-        <tr><td>Adventure</td><td>5 days</td><td>$1,499</td></tr>
-        <tr><td>Ultimate</td><td>7 days</td><td>$2,199</td></tr>
-      </tbody>
-    </table>
+    <h1>Full Budgeting for Trip</h1>
+    <p>Total Cost for Entire Trip: <strong id="total">$</strong>, or <strong id="totalPerson">$</strong> per person (excluding flights)</p>
+    <div style="border: 2px solid black; padding: 20px; margin-bottom: 50px;">
+      <h3>Individual Day Costs:</h3>
+      <div id="dayPurchasesSummary">
+      </div>
+    </div>
+    <div style="border: 2px solid black; padding: 20px; margin-bottom: 50px;">
+      <h3>All Trip Purchases:</h3>
+      <div id="allPurchases">
+      </div>
+    </div>
+    <div style="border: 2px solid black; padding: 20px;">
+      <h3>Detailed Individual Day Costs:</h3>
+      <div id="dayPurchases">
+      </div>
+    </div>
+    <script src="pricing.js"></script>
+    <script>
+      createCostPerDayTableAllDates();
+      createAllPurchasesTable();
+      createDailyTotalsTable();
+      createTotals();
+    </script>
   </main>
 </body>
+
 </html>
