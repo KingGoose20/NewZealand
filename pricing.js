@@ -37,7 +37,11 @@ class Purchase {
         const start = Purchase.parseDate(this.startDate);
         const end = Purchase.parseDate(this.endDate);
 
-        return date >= start && date <= end;
+        if (+start === +end) {
+            return +date === +start;
+        }
+        return date >= start && date < end;
+
     }
 }
 
@@ -45,10 +49,12 @@ const allPurchases = [
     new Purchase("Car Rental", 3980, "16/01/2026", "28/01/2026"),
     new Purchase("Southern Laughter Backpackers Accomodation", 336.32, "16/01/2026", "16/01/2026"),
     new Purchase("Wonderland Makarora Lodge Camping", 215, "17/01/2026", "17/01/2026"),
+    new Purchase("JetBoat to Young Mouth", 235, "18/01/2026", "18/01/2026"),
+    new Purchase("JetBoat to Makarora", 1140, "21/01/2026", "21/01/2026"),
+    new Purchase("Queenstown Accomodation", 4500, "21/01/2026", "28/01/2026")
 ]
 
 function basePages() {
-    console.log("HERE");
     const pricing = document.getElementById('pricing');
     const day = pricing.dataset.date;
     const ul = document.createElement("ul");
