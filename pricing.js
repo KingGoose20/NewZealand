@@ -162,7 +162,7 @@ function createAllPurchasesTable(purchases) {
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Days</th>
-                <th>Cost / Day</th>
+                <th>Cost / Person</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -178,7 +178,7 @@ function createAllPurchasesTable(purchases) {
             <td>${p.startDate}</td>
             <td>${p.endDate}</td>
             <td>${p.getDurationDays()}</td>
-            <td>$${p.costPerDay()}</td>
+            <td>$${(p.price/9).toFixed(2)}</td>
         `;
         tbody.appendChild(row);
     });
