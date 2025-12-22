@@ -47,11 +47,11 @@ class Purchase {
 
 const allPurchases = [
     new Purchase("Car Rental", 3980, "16/01/2026", "28/01/2026"),
-    new Purchase("Southern Laughter Backpackers Accomodation", 336.32, "16/01/2026", "16/01/2026"),
-    new Purchase("Wonderland Makarora Lodge Camping", 215, "17/01/2026", "17/01/2026"),
-    new Purchase("JetBoat to Young Mouth", 235, "18/01/2026", "18/01/2026"),
-    new Purchase("JetBoat to Makarora", 1140, "21/01/2026", "21/01/2026"),
-    new Purchase("Queenstown Accomodation", 4500, "21/01/2026", "28/01/2026")
+    new Purchase("Southern Laughter Backpackers Accomodation", 336.32, "16/01/2026", "17/01/2026"),
+    new Purchase("Wonderland Makarora Lodge Camping", 223, "17/01/2026", "18/01/2026"),
+    new Purchase("JetBoat to Young Mouth", 245, "18/01/2026", "18/01/2026"),
+    new Purchase("Queenstown Accomodation", 3338.37, "22/01/2026", "27/01/2026"),
+    new Purchase("Southern Laughter Backpackers Accomodation", 336.25, "27/01/2026", "28/01/2026"),
 ]
 
 function basePages() {
@@ -242,6 +242,6 @@ function createTotals() {
     allPurchases.forEach(p => {
         total += p.price;
     });
-    document.getElementById("total").innerHTML += total;
+    document.getElementById("total").innerHTML += total.toFixed(2);
     document.getElementById("totalPerson").innerHTML += (total / 9).toFixed(2);
 }
